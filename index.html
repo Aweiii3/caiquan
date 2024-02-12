@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF8"></meta>
+    <title>阿伟的猜拳小游戏</title>
+        <style>
+           h1{
+            font-size: 130px;
+           }
+           button{
+            font-size: 180px;
+           }
+           img{
+            height: 1000px;
+           }    
+           body{
+            background-color: pink;
+           }
+           a{
+            font-size: 50px;
+           }       
+        </style>
+    <body>
+        <!--点进按钮来运行-->
+    <h1>点按钮来猜拳吧</h1>
+    <button onclick='
+        generatecomputerchoice();
+
+        if(computerchoice === "石头"){
+            alert("啊这平局")
+        } else if (computerchoice === "剪刀"){
+            alert("侥幸让你赢了")
+        }   else(
+            alert("菜就多练,输不起就别玩")
+        )
+    '>石头</button>
+
+    <button onclick='
+        generatecomputerchoice();
+
+     if(computerchoice === "石头"){
+         alert("菜就多练,输不起就别玩")
+     } else if (computerchoice === "剪刀"){
+         alert("啊这平局")
+     }   else(
+         alert("侥幸让你赢了")
+     )
+    '>剪刀</button>
+    <button onclick='
+        generatecomputerchoice();
+
+     if(computerchoice === "石头"){
+         alert("侥幸让你赢了")
+     } else if (computerchoice === "剪刀"){
+         alert("菜就多练，输不起就别玩")
+     }   else(
+         alert("啊这平局")
+     )
+    '>布</button>
+    <img src="https://steamuserimages-a.akamaihd.net/ugc/1997942978836227242/591EC361C45A671131B96782A728FCE79985F767/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
+     <a href="www.xvideo.com">更多小游戏</a>
+     <a href="https://aweiii3.github.io/chusheng/">阿伟的其他网站</a>
+     <a href="www.pornhub.com">神秘小网站</a>
+    <script>
+        //function就是函数，可以定义他
+        let computerchoice = "";
+        function generatecomputerchoice(){
+            const randomNumeber = Math.random()*3
+        console.log(randomNumeber);
+        if (0<=randomNumeber && randomNumeber<1){
+            computerchoice = "石头"
+            alert("电脑出了石头");
+        } else if(1< randomNumeber && randomNumeber< 2){
+           computerchoice = "剪刀"
+            alert("电脑出了剪刀");
+        } else{
+            computerchoice = "布"
+           alert("电脑出了布");
+        }
+
+        }
+
+    </script>
+    </body>
+</head>
+</html>
